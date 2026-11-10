@@ -4,7 +4,7 @@
 <head>
 	<title>Alligators</title>
 	<style>
-		*{
+		* {
 			box-sizing: border-box;
 		}
 
@@ -13,14 +13,26 @@
 			padding: 20px;
 			margin: 0 auto;
 			background-color: rgb(45, 63, 206);
-			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;	
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		}
 
-		p{
+		.columns {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+			align-items: flex-start;
+		}
+
+		.columns section {
+			flex: 1;
+			min-width: 300px;
+		}
+
+		p {
 			font-size: 1.4rem;
 			padding: 20px;
 			border: 2px solid darkgray;
-			background-color: blanchedalmond;	
+			background-color: blanchedalmond;
 		}
 
 		h1 {
@@ -33,15 +45,14 @@
 		}
 
 		img {
-			width: 650px;
+			max-width: 100%;
 			padding: 3px;
 			border: 3px dotted yellow;
 			border-radius: 6px;
 		}
 
-		section{
+		section {
 			padding: 20px;
-			margin: 20px;
 			border-radius: 6px;
 		}
 
@@ -52,7 +63,7 @@
 
 		.habitat {
 			border: 2px solid darkgreen;
-			background-color: beige;	
+			background-color: beige;
 		}
 	</style>
 </head>
@@ -60,29 +71,30 @@
 <body>
 	<h1>Daniel's cool site</h1>
 	<p>Alligators are predatory amphibious reptiles</p>
-	<section class="facts">
-		<h2>Alligator Facts</h2>
-		<ul>
-			<li>They have <strong>scales</strong></li>
-			<li>They eat turtles and mammals and stuff</li>
-			<li>They hold their breath under water</li>
-		</ul>
-	</section>
-	<section class="habitat">
-		<h2>Where They Live</h2>
-		<ol>
-			<li><em>Florida</em>
-				<ul>
-					<li>in the swamp</li>
-					<li>in grandmas backyard</li>
-					<li>on the beach</li>
-				</ul>
-			</li>
-			<li>China</li>
-			<li>Not Africa, Crocodiles live there</li>
-		</ol>
-	</section>
-
+	<div class="columns">
+		<section class="facts">
+			<h2>Alligator Facts</h2>
+			<ul>
+				<li>They have <strong>scales</strong></li>
+				<li>They eat turtles and mammals and stuff</li>
+				<li>They hold their breath under water</li>
+			</ul>
+		</section>
+		<section class="habitat">
+			<h2>Where They Live</h2>
+			<ol>
+				<li><em>Florida</em>
+					<ul>
+						<li>in the swamp</li>
+						<li>in grandmas backyard</li>
+						<li>on the beach</li>
+					</ul>
+				</li>
+				<li>China</li>
+				<li>Not Africa, Crocodiles live there</li>
+			</ol>
+		</section>
+	</div>
 	<p><a href="https://en.wikipedia.org/wiki/Alligator">Alligator wikipedia</a></p>
 	<img src="alligator.jpg" alt="A big ass green alligator">
 </body>
