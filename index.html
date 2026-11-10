@@ -4,15 +4,28 @@
 <head>
 	<title>Alligators</title>
 	<style>
+		*{
+			box-sizing: border-box;
+		}
+
 		body {
-			background-color: aqua;
-			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-			
+			max-width: 700px;
+			padding: 20px;
+			margin: 0 auto;
+			background-color: rgb(45, 63, 206);
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;	
+		}
+
+		p{
+			font-size: 1.4rem;
+			padding: 20px;
+			border: 2px solid darkgray;
+			background-color: blanchedalmond;	
 		}
 
 		h1 {
 			text-align: center;
-			color: brown;
+			color: gold;
 		}
 
 		h2 {
@@ -20,15 +33,34 @@
 		}
 
 		img {
-			width: 400px;
+			width: 650px;
+			padding: 3px;
+			border: 3px dotted yellow;
+			border-radius: 6px;
+		}
+
+		section{
+			padding: 20px;
+			margin: 20px;
+			border-radius: 6px;
+		}
+
+		.facts {
+			border: 2px solid burlywood;
+			background-color: antiquewhite;
+		}
+
+		.habitat {
+			border: 2px solid darkgreen;
+			background-color: beige;	
 		}
 	</style>
 </head>
 
 <body>
-	<h1>Daniel</h1>
+	<h1>Daniel's cool site</h1>
 	<p>Alligators are predatory amphibious reptiles</p>
-	<section>
+	<section class="facts">
 		<h2>Alligator Facts</h2>
 		<ul>
 			<li>They have <strong>scales</strong></li>
@@ -36,7 +68,7 @@
 			<li>They hold their breath under water</li>
 		</ul>
 	</section>
-	<section>
+	<section class="habitat">
 		<h2>Where They Live</h2>
 		<ol>
 			<li><em>Florida</em>
