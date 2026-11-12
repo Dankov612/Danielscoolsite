@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>fact gen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,16 +20,16 @@
 
     <button id="fact-button" class="btn">Show me an Alligator fact!</button>
 
-    <p id="fact-text"><strong>Click the button!</strong></p>
+    <p id="fact-text">Click the button!</p>
 
     <img src="chinchilla.jpg" alt="A fat chinchilla">
 
     <button id="fact-button2" class="btn">Show me a Chinchilla fact!</button>
 
-    <p id="fact-text2"><strong>Click the button!</strong></p>
+    <p id="fact-text2">Click the button!</p>
 
     <script>
-        const facts = [
+        const alligatorFacts = [
             "Alligators can live 50 years or more.",
             "Their jaws close with enormous force but open weakly.",
             "Baby alligators chirp to call their mother.",
@@ -41,15 +41,7 @@
         const button1 = document.querySelector("#fact-button");
         const factText = document.querySelector("#fact-text");
 
-        function showFact() {
-            const index = Math.floor(Math.random() * facts.length);
-            factText.textContent = facts[index];
-        }
-
-        button1.addEventListener("click", showFact);
-
-
-        const facts2 = [
+        const chinchillaFacts = [
             "Chinchillas have the densest fur of any land mammal, with up to 60 hairs growing out of a single follicle.",
             "Because their fur is so thick, fleas and other parasites suffocate in it and cannot survive on a chinchilla.",
             "Chinchillas cannot get wet because their dense coat traps moisture and can develop fungus, so they take dust baths in fine volcanic ash instead.",
@@ -61,12 +53,26 @@
         const button2 = document.querySelector("#fact-button2");
         const factText2 = document.querySelector("#fact-text2");
 
-        function showFact2() {
-            const index = Math.floor(Math.random() * facts2.length);
-            factText2.textContent = facts2[index];
+        //hi claude, is it really that simple? :)
+        function showFact(list, output) {
+            let index = Math.floor(Math.random() * list.length);
+
+            while (output.textContent === list[index]){
+                index = Math.floor(Math.random() * list.length);
+            }
+            
+            output.textContent = list[index];
         }
 
-        button2.addEventListener("click", showFact2);
+
+        button1.addEventListener("click", function () {
+            showFact(alligatorFacts, factText);
+        });
+
+        button2.addEventListener("click", function () {
+            showFact(chinchillaFacts, factText2);
+        });
+
     </script>
 
 
